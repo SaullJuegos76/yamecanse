@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores y Amor</title>
+    <style>
+        /* Fondo de corazones y flores */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffcccb, #fff);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            position: relative;
+            height: 100vh;
+            background-image: url('FLORES AMARRILLAS.jpg'); /* Imagen de flores amarillas como fondo */
+            background-size: cover; /* Ajustar tamaño de la imagen */
+            background-position: center; /* Centrar la imagen */
+            background-attachment: fixed; /* Mantener la imagen fija */
+        }
+
+        /* Corazones en el fondo */
+        .heart {
+            position: absolute;
+            width: 100px;
+            height: 90px;
+            background: #ff0066;
+            transform: rotate(45deg);
+            animation: float 10s ease-in-out infinite;
+            opacity: 0.7;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: #ff0066;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 50px;
+            top: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(45deg);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translateY(-30px) rotate(45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0) rotate(45deg);
+                opacity: 0.8;
+            }
+        }
+
+        /* Estilo del texto */
+        .message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ff0066;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Corazones animados en el fondo -->
+    <div class="heart" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+    <div class="heart" style="top: 30%; left: 50%; animation-delay: 2s;"></div>
+    <div class="heart" style="top: 60%; left: 30%; animation-delay: 4s;"></div>
+    <div class="heart" style="top: 20%; left: 80%; animation-delay: 1s;"></div>
+
+    <!-- Mensaje de amor -->
+    <div class="message">
+        Me equivoqué de vida, pero jamás de amor al amarte y seguir amándote en esta vida y en la que sigue.
+    </div>
+
+</body>
+</html>
